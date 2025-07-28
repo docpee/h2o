@@ -9,6 +9,7 @@ body {
   font-style: normal;
   color: rgb(237, 237, 237);
   background-color: #1b1d1f;
+  visibility: hidden;
 }
 
 a {

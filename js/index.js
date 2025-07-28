@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   try {
     gsap.registerPlugin(ScrollTrigger, SplitText);
 
+    gsap.set("body", { autoAlpha: 1 });
+
     const glide = new Glide(".glide", {
       type: "carousel",
       focusAt: "center",
