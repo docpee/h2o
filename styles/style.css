@@ -158,13 +158,14 @@ header {
   background-color: #1b1d1f;
   padding: 12rem;
   overflow: hidden;
-  background-image: url("../assets/bg.png");
+  background-image: url("../assets/bg.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  background-repeat: repeat;
 }
 
 .schedule,
@@ -377,7 +378,7 @@ footer img {
 
   .chi-siamo p,
   .bjj p {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .cta p {
