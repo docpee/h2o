@@ -7,6 +7,9 @@ import ChiSiamoController from "./controllers/ChiSiamoController.js";
 import ScheduleView from "./views/ScheduleView.js";
 import ScheduleController from "./controllers/ScheduleController.js";
 
+import CarouselView from "./views/CarouselView.js";
+import CarouselController from "./controllers/CarouselController.js";
+
 import BJJView from "./views/BJJView.js";
 import BJJController from "./controllers/BJJController.js";
 
@@ -15,20 +18,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger, SplitText);
 
     gsap.set("body", { autoAlpha: 1 });
-
-    const glide = new Glide(".glide", {
-      type: "carousel",
-      focusAt: "center",
-      perView:
-        window.innerWidth <= 768
-          ? 1
-          : window.innerWidth > 768 && window.innerWidth <= 1024
-          ? 2
-          : 3,
-      gap: 0,
-      autoplay: 2000,
-    });
-    glide.mount();
 
     // Hero section
     const headerView = new HeaderView();
@@ -41,6 +30,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Schedule section
     const scheduleView = new ScheduleView();
     new ScheduleController(scheduleView);
+
+    // Carousel section
+    const carouselView = new CarouselView();
+    new CarouselController(carouselView);
 
     // BJJ section
     const bjjView = new BJJView();

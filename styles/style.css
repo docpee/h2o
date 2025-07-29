@@ -181,6 +181,7 @@ header {
 }
 
 .bjj {
+  transform: translateY(-2px);
   background: linear-gradient(
     90deg,
     rgba(199, 60, 64, 1) 0%,
@@ -280,6 +281,17 @@ header {
   line-height: 1.2;
 }
 
+.bjj-logo-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bjj-logo-container img {
+  margin-top: 2rem;
+  width: 100px;
+  height: 100px;
+}
+
 footer {
   display: flex;
   padding: 1rem;
@@ -345,6 +357,16 @@ footer img {
   .schedule-table th {
     padding: 1rem;
   }
+
+  .bjj-logo-container {
+    margin-top: 3rem;
+    justify-content: center;
+  }
+
+  .bjj-logo-container img {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 /* Mobile (fino a 768px) */
@@ -394,6 +416,16 @@ footer img {
 
   .schedule-table th {
     padding: 1rem;
+  }
+
+  .bjj-logo-container {
+    margin-top: 3rem;
+    justify-content: center;
+  }
+
+  .bjj-logo-container img {
+    width: 75px;
+    height: 75px;
   }
 
   footer {
