@@ -284,6 +284,7 @@ header {
 .bjj-logo-container {
   display: flex;
   justify-content: flex-end;
+  gap: 2rem;
 }
 
 .bjj-logo-container img {
