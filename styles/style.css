@@ -66,7 +66,7 @@ a:hover {
   background-color: #f0f0f0;
   transform: scale(var(--after-scale));
   opacity: var(--after-opacity);
-  transition: transform 0.2s, opacity 0.2s; /* opzionale, ma aiuta se ci sono interruzioni */
+  transition: transform 0.2s, opacity 0.2s;
 }
 
 .evidenzia,
@@ -90,7 +90,7 @@ a:hover {
   transform: scaleY(var(--after-scale));
   transform-origin: bottom;
   opacity: var(--after-opacity);
-  transition: transform 0.2s, opacity 0.2s; /* opzionale, ma aiuta se ci sono interruzioni */
+  transition: transform 0.2s, opacity 0.2s;
   z-index: -1;
 }
 
@@ -120,7 +120,7 @@ header {
   object-fit: cover;
   z-index: 0;
   mix-blend-mode: overlay;
-  pointer-events: none; /* opzionale: evita che il video intercetti i click */
+  pointer-events: none;
   filter: blur(5px);
 }
 
@@ -215,17 +215,17 @@ header {
 }
 
 .banner-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1b1d1f;
-  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.banner-video video {
-  width: 100%;
-  object-fit: cover;
-  pointer-events: none; /* opzionale: evita che il video intercetti i click */
+.banner-video iframe {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  pointer-events: none;
 }
 
 .schedule-container {
@@ -236,7 +236,6 @@ header {
 .schedule-table {
   border-collapse: collapse;
   background: #1b1d1f;
-  /* border: 2px solid rgba(199, 60, 64, 1); */
   box-shadow: 0 0 20px rgba(116, 23, 9, 1);
   table-layout: fixed;
   width: 100%;
@@ -255,7 +254,7 @@ header {
 .schedule-table td {
   width: 100px;
   height: 100px;
-  aspect-ratio: 1 / 1; /* moderne */
+  aspect-ratio: 1 / 1;
   text-align: center;
   border: 1px solid #333;
   padding: 0;
@@ -359,6 +358,10 @@ footer img {
     padding: 1rem;
   }
 
+  .banner-video {
+    height: 45vh;
+  }
+
   .bjj-logo-container {
     margin-top: 3rem;
     justify-content: center;
@@ -403,6 +406,10 @@ footer img {
   .chi-siamo p,
   .bjj p {
     font-size: 1.15rem;
+  }
+
+  .banner-video {
+    height: 30vh;
   }
 
   .cta p {

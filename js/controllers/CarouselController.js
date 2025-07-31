@@ -1,7 +1,13 @@
 export default class CarouselController {
   constructor(view) {
     this.view = view;
-    this.images = ["foto-1.jpeg", "foto-2.jpeg", "foto-3.jpeg", "foto-4.jpeg"];
+    this.images = [
+      "foto-1.jpeg",
+      "foto-2.jpeg",
+      "foto-3.jpeg",
+      "foto-4.jpeg",
+      "foto-5.jpeg",
+    ];
 
     this.glide = new Glide(".glide", {
       type: "carousel",
